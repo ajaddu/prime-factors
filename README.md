@@ -1,1 +1,1 @@
-# primefactors
+# prime-factors
