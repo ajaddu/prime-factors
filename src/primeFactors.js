@@ -1,18 +1,19 @@
 function primeFactors(suppliedNumber){
     let number = suppliedNumber;
+    let candidate = 2;
     let primes = [];
 
-    if(number > 1){
-        while(number % 2 === 0){
-            primes.push(2);
-            number /= 2;
+    while(number > 1){
+        while(number % candidate === 0){
+            primes.push(candidate);
+            number /= candidate;
         }
-
-        if(number > 1){
-            primes.push(number);
-        }
+        candidate += 1;
     }
     
+    if(number > 1){
+        primes.push(number);
+    }
     return primes;
 }
 
